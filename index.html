@@ -4,31 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Candy Shop</title>
+    <title>Fincher's Candy</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body-2">
     <header class="header">
-      <h1 class="title">Fincher's Candy</h1>
+      <h1>Fincher's Candy</h1>
 
+      <div class="icon">
+        <h1>🍬</h1>
+        <h1>🍫</h1>
+        <h1>🍭</h1>
+      </div>
+      
+      
       <nav>
-        <a href="about.html" class="about link">About</a>
-        <a href="nutrition.html" class="nutrition link">Nutrition</a>
-        <a href="location.html" class="location link">Location</a>
+        <a href="landing.html" class="link">Home</a>
+        <a href="about.html" class="link">About</a>
+        <a href="nutrition.html" class="link">Nutrition</a>
+        <a href="location.html" class="link">Location</a>
+        <a href="cart.html">🛒</a> 
       </nav>
     </header>
+    <br><br>
 
-    <main class="container">
-      <div>
+    <section class="container">
+      <div class="first">
         <div class="candy">
           <img
             src="https://static.wixstatic.com/media/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg"
-            alt="Sour Gummy Worms"
-            class="photo"
+            alt="Gummy Worms"
+            class="pic photo"
           />
-          <br>
-          <p class="detail">Sour Gummy Worms</p>
-          <p class="price">$10/lb</p><br>
+          <br />
+          <p class="detail">Gummy Worms</p>
+          <p class="price">$5/lb</p>
+          <br />
+          <button class="add">Add to Cart</button>
+        </div>
+
+        <div class="candy">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTFJJlVa0-KchXj2iTLPQT689dR0leErGd3w&usqp=CAU"
+            alt="Fruit Chews"
+            class="pic photo"
+          />
+          <br />
+          <p class="detail">Fruit Chews</p>
+          <p class="price">$10/1lbs</p>
+          <br />
           <button class="add">Add to Cart</button>
         </div>
 
@@ -36,23 +60,12 @@
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoqN13DsKut-VhKccMeD9LJGP0LTorOAUug&usqp=CAU"
             alt="Chocolate Truffles"
-            class="photo"
+            class="pic photo"
           />
-          <br>
+          <br />
           <p class="detail">Variety Chocolate Truffles</p>
-          <p class="price">4 for $10</p><br>
-          <button class="add">Add to Cart</button>
-        </div>
-
-        <div class="candy">
-          <img
-            src="https://tastesbetterfromscratch.com/wp-content/uploads/2014/04/Homemade-Caramels-4.jpg"
-            alt="Caramels"
-            class="photo"
-          />
-          <br>
-          <p class="detail">Individual Wrapped Caramel Square</p>
-          <p class="price">2.5oz for $9</p><br>
+          <p class="price">4 for $10</p>
+          <br />
           <button class="add">Add to Cart</button>
         </div>
       </div>
@@ -60,25 +73,14 @@
       <div>
         <div class="candy">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLEXj8VuUmzmsOrCx1Qf1DQVyxhNkJ0ZnH0w&usqp=CAU"
-            alt="Lollipops"
-            class="Lollipop photo"
-          />
-          <br>
-          <p class="Lollipop detail">Sprinkle Lollipops</p>
-          <p class="Lollipop price">20 for $5</p><br>
-          <button class="add">Add to Cart</button>
-        </div>
-
-        <div class="candy">
-          <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdf2ROqqCr3TuSRJQ-ZnCX6l9HS1Yf_V5xQ&usqp=CAU"
             alt="Peanut Butter Cups"
-            class="Cups photo"
+            class="pic photo"
           />
-          <br>
-          <p class="Cups detail">Peanut Butter Cups</p>
-          <p class="Cups price">4 for $5</p><br>
+          <br />
+          <p class="detail">Peanut Butter Cups</p>
+          <p class="price">4 for $5</p>
+          <br />
           <button class="add">Add to Cart</button>
         </div>
 
@@ -86,16 +88,72 @@
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBkh_fNsAAT_xP0mJhEts6ddNmgXzdAdpsQ&usqp=CAU"
             alt="Rock Candy"
-            class="Rock photo"
+            class="pic photo"
           />
-          <br>
-          <p class="Rock detail">Colored Rock Candy</p>
-          <p class="Rock price">10 for $5</p><br>
+          <br />
+          <p class="detail">Colored Rock Candy</p>
+          <p class="price">10 for $5</p>
+          <br />
+          <button class="add">Add to Cart</button>
+        </div>
+
+        <div class="candy">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA33Wlng065mVYRRQ3WO9wKnrz8rCzinuM5g&usqp=CAU"
+            alt="Chiclet Gum"
+            class="pic photo"
+          />
+          <br />
+          <p class="detail">Chiclet Gum</p>
+          <p class="price">$10/1lbs</p>
+          <br />
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>   
+      
+      <div>
+        <div class="candy">
+          <img
+            src="https://tastesbetterfromscratch.com/wp-content/uploads/2014/04/Homemade-Caramels-4.jpg"
+            alt="Caramel Chews"
+            class="pic photo-2"
+          />
+          <br />
+          <p class="detail">Caramel</p>
+          <p class="price">2.5oz for $9</p>
+          <br />
+          <button class="add">Add to Cart</button>
+        </div>
+
+        <div class="candy">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNrCJb0Z8yDRIzknGSuffVZvU0GCgH5ytOzg&usqp=CAU"
+            alt="Fruit Slices"
+            class="pic photo-2"
+          />
+          <br />
+          <p class="detail">Fruit Slices</p>
+          <p class="price">$15/3lbs</p>
+          <br />
+          <button class="add">Add to Cart</button>
+        </div>
+
+        <div class="candy">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLEXj8VuUmzmsOrCx1Qf1DQVyxhNkJ0ZnH0w&usqp=CAU"
+            alt="Sprinkle Lollipops"
+            class="pic photo-3"
+          />
+          <br />
+          <p class="detail">Lollipops</p>
+          <p class="price">20 for $5</p>
+          <br />
           <button class="add">Add to Cart</button>
         </div>
       </div>
-    </main>
+    </section>
   </body>
+
   <footer>
     <p>&copy; 2022 Fincher's Candy</p>
   </footer>

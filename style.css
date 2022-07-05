@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -10,14 +9,20 @@ body {
   background-color: lightpink;
 }
 
+
 .header {
   background-color: cyan;
   color: chocolate;
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icon {
+  display: flex;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
 .link:link {
@@ -30,42 +35,126 @@ body {
   color: gray;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
+.photo {
+  height: auto;
+  width: 200px;
+}
+
+.click:hover,
+.click-2:hover {
+  background-color: transparent;
 }
 
 .text {
-  padding-top: 100px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-content: center;
+}
+
+/* landing */
+.body {
+  background-color: cyan;
+}
+
+.landing {
+  border-bottom: 3px solid black;
+}
+
+.page {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: cyan;
+}
+
+.top {
+  margin-top: 80px;
+  display: flex;
+  width: 100%;
+}
+
+.bowls {
+  margin-left: 170px;
+  width: 400px;
+  border-radius: 75px;
+}
+
+.intro {
+  font-family: cursive;
+  color: gray;
+  font-size: 50px;
+}
+
+.line {
+  color: gray;
+  font-weight: bold;
+}
+
+.click {
+  border: 2px solid black;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: lightpink;
+  color: #00a2ff;
+  font-weight: bold;
+}
+
+.mail-list {
+  padding: 15px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+}
+
+.copyright {
+  margin: 40px;
+}
+
+/* index */
+.body-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.first {
+  display: inline-flex;
   flex-direction: column;
-  column-rule-width: 0;
-}
-
-.nutr {
-  border: 5px solid;
-  width: auto;
-  height: fit-content;
-  list-style: none;
   justify-content: center;
-  align-items: center;
-}
-
-.nutr:last-child {
-  border-left: none;
-}
-
-.photo {
-  height: 250px;
-  width: auto;
-  padding: 15px 0 15px 15px;
-  margin-top: 30px;
+  padding-left: 200px;
 }
 
 .candy {
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 15px 0 15px 15px;
+}
+
+.pic {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.detail {
+  font-style: italic;
+}
+
+.price {
+  font-weight: bold;
 }
 
 .add {
@@ -76,44 +165,168 @@ body {
   background-color: transparent;
 }
 
+.photo-2 {
+  height: 200px;
+  width: auto;
+}
+
+.photo-3 {
+  height: 160px;
+}
+
+/* About */
+.about {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-around;
+}
+
 .owner {
   padding: 20px;
   margin-top: 20px;
-  text-align: center;
+}
+
+.desc {
+  margin: 0 100px;
+  border: 5px solid;
   display: flex;
-  ;
-}
-
-p {
-  color: black;
-  display: contents;
   justify-content: center;
+  align-items: center;
 }
 
-li {
-  border-bottom: 5px solid;
+.signup {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-list-2 {
+  font-weight: bold;
+  display: flex;
+  justify-self: center;
+}
+
+.click-2 {
+  border: 3px solid black;
+  text-decoration: none;
+  border-radius: 75px;
+  padding: 5px;
+  background-color: cyan;
+  font-weight: bold;
+}
+
+/* Nutrition*/
+.info {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  color: darkgoldenrod;
+  text-decoration: underline ghostwhite;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.nutr {
+  width: auto;
   height: fit-content;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  border-bottom: 5px solid;
 }
 
-li:last-child {
-  border-bottom: none;
+.unordered {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid;
+}
+
+.list {
+  margin-left: 15px;
+  border-right: 5px solid;
+  text-align: center;
+}
+
+.list:last-child {
+  border-right: none;
 }
 
 .border {
   border-bottom: 2px solid;
+  padding-right: 10px;
 }
 
-.info{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: italic ;
-  color: darkgoldenrod;
-  text-decoration: underline ghostwhite;
+/* Location */
+.location {
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .map {
   border: 2px solid;
 }
 
-footer {
-  padding-top: 20px;
+.updates {
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+
+.input {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media {
+  height: 25px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+
+/* Cart */
+
+.cart {
+  background-color: white;
+}
+.sparce {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  width: 100%;
+  margin-top: 10px;
+  background-color: lightblue
+}
+
+.arrow {
+  display: flex;
+  justify-self: left;
+}
+
+.title {
+  color: chocolate;
+  display: flex;
+  justify-self: center;
+}
+
+.total {
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
