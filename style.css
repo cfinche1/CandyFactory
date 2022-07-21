@@ -6,17 +6,30 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.4;
-  background-color: lightpink;
+  background-image: url("https://images.alphacoders.com/659/659121.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: device-width;
 }
 
 
 .header {
-  background-color: cyan;
+  background-color: skyblue;
   color: chocolate;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+.fincher {
+  color: chocolate;
+  text-decoration: none;
+}
+
+.fincher:hover {
+color: gray;
 }
 
 .icon {
@@ -53,7 +66,7 @@ body {
 
 /* landing */
 .body {
-  background-color: cyan;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMY6j2lfizbR7F4i8XTWda92cwpIK2JNNXeA&usqp=CAU");
 }
 
 .landing {
@@ -64,7 +77,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
-  background-color: cyan;
 }
 
 .top {
@@ -74,26 +86,34 @@ body {
 }
 
 .bowls {
-  margin-left: 170px;
   width: 400px;
   border-radius: 75px;
+  margin-bottom: 10px;
+}
+
+.shadow {
+  box-shadow:  30px 10px lightgrey;
 }
 
 .intro {
   font-family: cursive;
-  color: gray;
+  color:mediumvioletred;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
   font-size: 50px;
 }
 
 .line {
-  color: gray;
   font-weight: bold;
+  color: deeppink;
+  -webkit-text-stroke-width: .4px;
+    -webkit-text-stroke-color: black;
 }
 
 .click {
-  border: 2px solid black;
+  border: 3px solid black;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 15px;
   padding: 5px;
   margin-top: 20px;
   background-color: lightpink;
@@ -105,13 +125,51 @@ body {
   padding: 15px;
 }
 
-.footer {
-  width: 100%;
+.background {
+  background-color: blanchedalmond;
+  border:blueviolet 5px solid
+}
+
+.extra {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.click-3 {
+  border: 3px solid blanchedalmond;
+  text-decoration: none;
+  border-radius: 60px;
+  padding: 5px;
+  background-color: blanchedalmond;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.span {
+  color:magenta;
+  margin-bottom: 5px;
+}
+
+.footer {
+  color: white;
+  width: 100%, device-width;
+  display: flex;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYE-Nj5APM66EiAzDBQI7oOUVsJZVGqI7tzw&usqp=CAU");
+}
+
+.transparent {
+  opacity: 65%;
 }
 
 .copyright {
   margin: 40px;
+}
+
+.align {
+  display: flex;
+  align-self: flex-start;
+  justify-self: flex-end;
 }
 
 /* index */
@@ -132,7 +190,6 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 200px;
 }
 
 .candy {
@@ -192,25 +249,35 @@ body {
 }
 
 .desc {
-  margin: 0 100px;
-  border: 5px solid;
+  margin: 20px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz2tROAa44M-6OFBMyFtXR82tjUU5lrh7G6A&usqp=CAU);
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .signup {
-  margin: 20px;
+  margin: 20px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .mail-list-2 {
   font-weight: bold;
   display: flex;
   justify-self: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.align {
+  display: flex;
+  align-self: flex-start;
 }
 
 .click-2 {
@@ -300,6 +367,7 @@ body {
 /* Cart */
 
 .cart {
+  background-image: none;
   background-color: white;
 }
 .sparce {
@@ -307,7 +375,7 @@ body {
   flex-direction: row;
   justify-content:space-around;
   width: 100%;
-  margin-top: 10px;
+  padding-top: 10px;
   background-color: lightblue
 }
 
