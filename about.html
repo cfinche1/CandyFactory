@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
   </head>
   <body>
     <header class="header">
@@ -19,13 +20,21 @@
         <h1>🍭</h1>
       </a>
 
-      <nav>
-        <a href="landing.html" class="link">Home</a>
-        <a href="index.html" class="link">Shop</a>
-        <a href="nutrition.html" class="link">Nutrition</a>
-        <a href="location.html" class="link">Contact</a>
-        <a href="cart.html">🛒</a>
-      </nav>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="landing.html" class="link">Home</a></li>
+        <li class="nav-item"><a href="index.html" class="link">Shop</a></li>
+        <li class="nav-item"><a href="faq.html" class="link">FAQ</a></li>
+        <li class="nav-item"><a href="location.html" class="link">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+
+      <a class="shopping" href="#">🛒</a>
     </header>
     <br><br>
 
@@ -45,7 +54,7 @@
       </div>
 
       <div class="desc extra">
-        <p class="owner">
+        <p class="text owner">
           Fincher's candy was opened in 2022 by owner and operator Cynthia
           Fincher. The store is a homemade candy shop nestled in the suburbs of
           Denver, CO. All candy is made by hand with the best ingredients. The
@@ -53,7 +62,7 @@
           from generations.
         </p>
 
-        <p class="owner">
+        <p class="text owner">
           We value the best in our customer interactions as we do our
           ingredients. We aim to provide the best service to customers from the
           craft of our sweets to your checkout! Fincher's Candy Shop is all
@@ -70,7 +79,37 @@
       </div>
 
       <footer class="footer">
-        <p class="copyright align">&copy; 2022 Fincher's Candy</p>
+        <p class="copyright">&copy; 2022 Fincher's Candy</p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXcPxjOa7CfhFtTe5oJDbjMpy2ox0bXMM5g&usqp=CAU"
+              alt="Facebook Link"
+              class="social-media"
+            />
+          </a>
+  
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXO2p5Jqo2rRvko3wQJu9Ps4RI4LwyF9TNRH2TyxmRTawEwi12vR4_d428xM7yddYXd0k&usqp=CAU"
+              alt="Instagram Link"
+              class="social-media"
+            />
+          </a>
+  
+          <a href="https://twitter.com/" target="_blank">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalGLWwNq0BPJffBAjTAA51YnfhxKB07yxog&usqp=CAU"
+              alt="Twitter Link"
+              class="social-media"
+            />
+          </a>
+        </div>
       </footer>
+
+      <script src="script.js"></script>
+      <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Location</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
   </head>
   <body>
     <header class="header">
@@ -19,74 +20,96 @@
         <h1>🍭</h1>
       </a>
 
-      <nav>
-        <a href="landing.html" class="link">Home</a>
-        <a href="index.html" class="link">Shop</a>
-        <a href="about.html" class="link">About</a>
-        <a href="nutrition.html" class="link">Nutrition</a>
-        <a href="cart.html">🛒</a>
-      </nav>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="landing.html" class="link">Home</a></li>
+        <li class="nav-item"><a href="index.html" class="link">Shop</a></li>
+        <li class="nav-item"><a href="about.html" class="link">About</a></li>
+        <li class="nav-item"><a href="faq.html" class="link">FAQ</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+
+      <a class="shopping" href="#">🛒</a>
     </header>
     <br /><br />
 
-    <section class="text location">
+    <section class="location">
       <div>
         <h2>Location info coming soon!!!</h2>
         <br />
-        <img
-          class="map"
-          src="https://www.idcide.com/i/mc2/co/parker.gif"
-          alt="Map locating Parker, CO"
-        />
+        <iframe
+        class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98505.151832831!2d-104.83572903707515!3d39.50803443739657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c91ce239a3d55%3A0xd49aeed43d2e2426!2sParker%2C%20CO!5e0!3m2!1sen!2sus!4v1658409580595!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
-      <div>
-        <h1 class="updates">Sign up for updates & coupons</h1>
-        <div class="input">
-          <p>Email Address</p>
-          <input type="text" />
-        </div>
+      <div class="location">
+        <form class="registration" id="signup">
+          <h1 class="updates">Sign up for updates & coupons</h1>
 
-        <div class="input">
-          <p>First Name</p>
-          <input type="text" />
-        </div>
+          <div class="input">
+            <label for="email-address">Email Address</label>
+            <input id="email-address" class="email" type="email" placeholder="Email" required/>
+          </div>
 
-        <div class="input">
-          <p>Last Name</p>
-          <input type="text" />
-        </div>
+          <div class="input">
+            <label for="name1">First Name</label>
+            <input id="name1" class="first-name" type="text" placeholder="First Name" required/>
+          </div>
 
-        <div class="social-links">
-          <a href="https://www.facebook.com/" target="_blank">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXcPxjOa7CfhFtTe5oJDbjMpy2ox0bXMM5g&usqp=CAU"
-              alt="Facebook Link"
-              class="social-media"
-            />
-          </a>
+          <div class="input">
+            <label for="name2">Last Name</label>
+            <input id="name2" class="last-name" type="text" placeholder="Last Name" required/>
+          </div>
 
-          <a href="https://www.instagram.com/" target="_blank">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXO2p5Jqo2rRvko3wQJu9Ps4RI4LwyF9TNRH2TyxmRTawEwi12vR4_d428xM7yddYXd0k&usqp=CAU"
-              alt="Instagram Link"
-              class="social-media"
-            />
-          </a>
-
-          <a href="https://twitter.com/" target="_blank">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalGLWwNq0BPJffBAjTAA51YnfhxKB07yxog&usqp=CAU"
-              alt="Twitter Link"
-              class="social-media"
-            />
-          </a>
-        </div>
+          <button id="btn" class="submit" onclick="showAlert()">Submit</button>
+        </form>
       </div>
     </section>
 
     <footer class="footer">
       <p class="copyright">&copy; 2022 Fincher's Candy</p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXcPxjOa7CfhFtTe5oJDbjMpy2ox0bXMM5g&usqp=CAU"
+            alt="Facebook Link"
+            class="social-media"
+          />
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXO2p5Jqo2rRvko3wQJu9Ps4RI4LwyF9TNRH2TyxmRTawEwi12vR4_d428xM7yddYXd0k&usqp=CAU"
+            alt="Instagram Link"
+            class="social-media"
+          />
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalGLWwNq0BPJffBAjTAA51YnfhxKB07yxog&usqp=CAU"
+            alt="Twitter Link"
+            class="social-media"
+          />
+        </a>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>
