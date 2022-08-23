@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Location</title>
+    <title>Gummy Worms</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
   </head>
@@ -24,6 +24,7 @@
         <li class="nav-item"><a href="landing.html" class="link">Home</a></li>
         <li class="nav-item"><a href="index.html" class="link">Shop</a></li>
         <li class="nav-item"><a href="about.html" class="link">About</a></li>
+        <li class="nav-item"><a href="location.html" class="link">Contact</a></li>
       </ul>
 
       <div class="hamburger">
@@ -35,47 +36,55 @@
 
       <a class="shopping" href="#">🛒</a>
     </header>
-    <br /><br />
+    <br><br>
 
-    <section class="location">
-      <div class="maps">
-        <h1 class="location-text">Location info coming soon!!!</h1>
-        <br />
-        <iframe
-          class="map shadow2"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98505.151832831!2d-104.83572903707515!3d39.50803443739657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c91ce239a3d55%3A0xd49aeed43d2e2426!2sParker%2C%20CO!5e0!3m2!1sen!2sus!4v1658409580595!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+    <div class="info">
+      <div class="unordered">
+        <div class="sparce2">
+          <a href="index.html" class="arrow">&#11178 Back</a>
+        </div>
+        <div class="nutr">
+          <h2 class="border">Gummy Worms 
+            <center>
+              <img 
+                src="https://static.wixstatic.com/media/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg"
+                alt="Gummy Worms"
+                class="pic photo shadow2"
+              /> <br>
+              <div class="stars">
+                <a>⭐</a>
+                <a>⭐</a>
+                <a>⭐</a>
+                <a>⭐</a>
+                <a>⭐</a>
+              </div>
+              <p>$5/lb</p>
+              <button onclick="worms()" class="add2">
+                Add to Cart
+              </button>
+              <p class="margin-left summary">It has been said 
+                that the worm came before the bear! These are 
+                so tasty you will be reaching for more! These 
+                Gummy Worms are chewy and sweet and make a great
+                snack for just about anytime, but definitely movie
+                night!
+              </p>
+            </center>
+            <p>Nutrition</p> 
+          </h2>
+          <p>Serving size: 4 worms</p>
+          <br />
+          <p>Calories: 229</p>
+          <br />
+          <p>Carbs: 44g</p>
+          <br />
+          <p>Sugar: 43g</p>
+        </div>
+        <h3 class="left margin-left">Ingredients:
+          <p class="summary">Jello, Gelatin, Water</p>
+        </h3>
       </div>
-
-      <div class="signup">
-        <form class="registration" id="signup">
-          <h1 class="updates">Sign up for updates & coupons</h1>
-
-          <div class="input">
-            <label for="email-address">Email Address</label>
-            <input id="email-address" class="email" type="email" placeholder="Email" required/>
-          </div>
-
-          <div class="input">
-            <label for="name1">First Name</label>
-            <input id="name1" class="first-name" type="text" placeholder="First Name" required/>
-          </div>
-
-          <div class="input">
-            <label for="name2">Last Name</label>
-            <input id="name2" class="last-name" type="text" placeholder="Last Name" required/>
-          </div>
-
-          <button id="btn" class="submit" onclick="showAlert()">Submit</button>
-        </form>
-      </div>
-    </section>
+    </div>
 
     <footer class="footer">
       <p class="copyright">&copy; 2022 Fincher's Candy</p>
@@ -106,6 +115,7 @@
         </a>
       </div>
     </footer>
+    
 
     <script src="script.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>

@@ -76,13 +76,19 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 20px;
+  z-index: 99999;
 }
 
 .icon {
   display: flex;
-  margin: 10px, 10px;
+  margin: 5px, 10px;
   text-decoration: none;
+}
+
+.left {
+  text-align: left;
+  margin-top: 10px;
 }
 
 .link {
@@ -160,7 +166,7 @@ body {
 }
 
 .body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMY6j2lfizbR7F4i8XTWda92cwpIK2JNNXeA&usqp=CAU");
+  background: #447997;
 }
 
 .bowls {
@@ -168,6 +174,7 @@ body {
   border-radius: 75px;
   margin-left: 20px;
   margin-bottom: 10px;
+  margin-top: 70px;
 }
 
 .btn {
@@ -182,14 +189,18 @@ body {
 }
 
 .click {
+  display: block;
+  text-align: center;
   border: 3px solid black;
   text-decoration: none;
+  text-align: center;
   border-radius: 15px;
   padding: 5px;
   margin-top: 20px;
-  background-color: lightpink;
-  color: #00a2ff;
+  background-color: #f57af5;
   font-weight: bold;
+  width: 200px;
+  margin-left: 125px;
 }
 
 .click-3 {
@@ -203,8 +214,7 @@ body {
 }
 
 .closebtn {
-  margin-left: 15px;
-  margin-bottom: 10px;
+  margin: 15px;
   color: black;
   font-weight: bold;
   float: left;
@@ -225,17 +235,7 @@ body {
   width: 200px;
   height: 200px;
   display: flex;
-  padding: 10px;;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  padding: 10px;
 }
 
 .form-container {
@@ -249,19 +249,17 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   text-align: center;
-  padding: 30px;
 }
 
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
 .intro {
   font-family: cursive;
-  color: mediumvioletred;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  font-size: 50px;
+  font-size: 60px;
+  margin-bottom: 60px;
 }
 
 .landing {
@@ -270,30 +268,40 @@ body {
 
 .line {
   font-weight: bold;
-  color: deeppink;
-  -webkit-text-stroke-width: 0.4px;
-  -webkit-text-stroke-color: black;
+  font-size: medium;
 }
 
 .mail-list {
+  text-align: right;
   padding: 15px;
+  margin-bottom: 20px;
 }
 
 .main-banner {
   max-width: 1000px;
   position: relative;
-  margin: 40px auto;
+  margin: 70px 0 0 0;
 }
 
 .margin-text {
-  margin-left: 50px;
+  display: grid;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 4rem;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4VMjJiMEtTEHDyPSKlau9kDL3dhsuFU-Oew&usqp=CAU");
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-size: 800px 800px;
+  padding: 20px;
+  margin: 10px;
+  width: fit-content;
 }
 
 .page {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   gap: 20px;
-  margin-bottom: 15px;
 }
 
 .popup {
@@ -306,6 +314,19 @@ body {
 
 .popup-text {
   color: rgb(160, 114, 183);
+  margin: 0 10px;
+}
+
+.search-click2 {
+  font-size: 23px;
+  text-decoration: none;
+  text-align: center;
+  margin: 5px;
+  color: deeppink;
+  border:#f5b6e5 solid;
+  padding: 1px;
+  background-color: #f5b6e5;
+  border-radius: 1rem;
 }
 
 .shadow {
@@ -318,66 +339,91 @@ body {
 }
 
 .top {
-  margin-top: 80px;
   width: 100%;
 }
 
 /* Index */
 .add {
+  display: flex;
+  align-self: center;
+  justify-content: center;
   background-color: #f57af5;
   padding: 5px;
-  margin-top: 5px;
-  margin-left: 40px;
   height: 30px;
   width: 100px;
+  border-radius: 1rem;
 }
 
 .add:hover {
   background-color: transparent;
 }
 
-.body-2 {
-  display: flex;
-}
-
-.candy {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.candy-details {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
 
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .detail {
+  display: flex;
+  align-self: center;
   font-style: italic;
-  margin-left: 40px;
+  margin-top: 15px;
 }
 
 .photo-3 {
   height: 200px;
-}
-
-.pic {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-  margin: 20px;
+  width: 200px;
 }
 
 .price {
   font-weight: bold;
-  margin-left: 40px;
+  display: flex;
+  align-self: center;
+}
+
+section {
+  display: grid;
+  margin-top: 110px;
+  justify-content: space-evenly;
+  margin: 80px 5px 5px 5px;
+}
+
+.section {
+  text-decoration: underline;
+}
+
+.search-click {
+  opacity: 0;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.search-hide {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: white;
+}
+
+.search-icon {
+  display: flex;
+  height: 23px;
+  padding-right: 3px;
+}
+
+.search-icon:hover {
+  opacity: 0.5;
+}
+
+.search-text {
+  width: 150px;
+  height: 22px;
+  border: none;
+  outline: none;
 }
 
 /* About */
@@ -385,6 +431,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .click-2 {
@@ -415,8 +462,7 @@ body {
 }
 
 .owner {
-  padding: 20px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .photos {
@@ -425,7 +471,7 @@ body {
 }
 
 .signup {
-  margin: 20px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -433,7 +479,33 @@ body {
   width: 100%;
 }
 
-/* Nutrition*/
+.signup2 {
+  margin: 0 10px;
+}
+
+/* Candy Pages*/
+.add2 {
+  background-color: #f57af5;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 100px;
+}
+
+.add2:hover {
+  background-color: transparent;
+}
+
+.arrow {
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-self: left;
+  color: black;
+}
+
 .border {
   border-bottom: 2px solid;
   padding-right: 10px;
@@ -444,26 +516,63 @@ body {
   font-style: italic bold;
   font-size: xx-large;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.list {
-  margin-left: 15px;
-  border-right: 5px solid;
-  text-align: center;
+.summary {
+  font-size: large;
 }
 
-.list:last-child {
-  border-right: none;
+.margin-left {
+  margin-left: 10px;
 }
 
 .nutr {
+  text-align: center;
   width: auto;
   height: fit-content;
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border-bottom: 5px solid;
+}
+
+.sparce2 {
+  display: flex;
+  width: 150px;
+}
+
+.stars {
+  display: inline-flex;
+  font-size: 30px;
+}
+
+.stars a {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.stars a.active {
+  opacity: 100%;
+}
+
+.stars a:hover {
+  opacity: 100%;
+}
+
+.stars a:hover ~ a {
+  opacity: 50%;
+}
+
+.stars.disabled {
+  pointer-events: none;
+}
+
+.stars:hover a {
+  opacity: 100%;
 }
 
 .unordered {
@@ -481,12 +590,35 @@ body {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-bottom: 100px;
+}
+
+.location-text {
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.maps {
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.registration {
+  background-color: cadetblue;
+  display: block;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 2rem;
 }
 
 .submit {
-  background-color: #00a2ff;
+  background-color: #84c9f1;
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
@@ -502,11 +634,6 @@ body {
 }
 
 /* Cart */
-.arrow {
-  display: flex;
-  justify-self: left;
-}
-
 .cart {
   background-image: none;
   background-color: white;
@@ -535,18 +662,62 @@ body {
 }
 
 /* Media Query */
-@media (max-width: 950px) {
+@media (max-width: 980px) {
   .about {
     text-align: center;
-  }
-  .location {
-    display: block;
-    margin-left: 40px;
   }
 
   .extra {
     display: block;
     text-align: center;
+  }
+
+  .form-container {
+    height: fit-content;
+  }
+
+  .header {
+    height: 110px;
+  }
+
+  .info {
+    margin-top: 65px;
+  }
+
+  .intro {
+    margin-bottom: 0px;
+  }
+
+  .left {
+    margin-top: 5px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .main-banner {
+    margin: 65px 0 0 0;
+  }
+
+  .nav-menu {
+    top: 105px;
+  }
+
+  .margin-text {
+    width: fit-content;
+  }
+
+  .page {
+    display: grid;
+    margin-top: 50px;
+  }
+
+  .registration {
+    width: 400px;
   }
 
   .span {
@@ -555,7 +726,17 @@ body {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 940px) {
+  .bowls {
+    width: 500px;
+  }
+
+  .fincher {
+    overflow-wrap: break-word;
+    margin-left: 10px;
+    padding-left: 5px;
+    width: 160px;
+  }
 
   .hamburger {
     display: block;
@@ -573,10 +754,13 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .icon {
+    margin: 10px;
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
     gap: 0;
     flex-direction: column;
     background-color: skyblue;
@@ -592,12 +776,6 @@ body {
   .nav-item {
     margin: 16px 0;
   }
-
-  .title {
-    overflow-wrap: break-word;
-    margin-left: 10px;
-    padding-left: 5px;
-  }
 }
 
 @media (max-width: 800px) {
@@ -611,31 +789,37 @@ body {
   }
 
   .bowls {
-    justify-self: center;
+    width: 400px;
+    margin-left: 0;
+    margin-bottom: 50px;
   }
 
-  .candy {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+  .click-2 {
+    margin-right: 40px;
   }
 
-  .container {
-    display: block;
-    margin-top: 50px;
+  .form-container {
+    width: fit-content;
   }
 
-  .info {
-    margin-top: 120px;
+  .location {
+    margin-left: 0;
   }
 
   .mail-list-2 {
     margin-right: 30px;
   }
 
+  .main-banner {
+    margin-bottom: 0px;
+  }
+
   .map {
     width: 400px;
+  }
+
+  .maps {
+    margin-left: 10px;
   }
 
   .padding {
@@ -651,8 +835,8 @@ body {
   }
 
   .photos {
-   display: block;
-   text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .photo-2 {
@@ -660,8 +844,32 @@ body {
     height: auto;
   }
 
-  .pic {
-    width: 300px;
-    height: auto;
+  .search-click {
+    opacity: 1;
+  }
+
+  .search-hide {
+    display: flex;
+    position: fixed;
+    left: -100%;
+    top: 110px;
+    background-color: skyblue;
+    width: 100%;
+    transition: 0.3s;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .search-hide.active {
+    left: 0;
+  }
+
+  .search-icon {
+    background-color: white;
+  }
+
+  .section {
+    text-align: center;
   }
 }

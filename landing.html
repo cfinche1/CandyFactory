@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fincher's Candy</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap-grid.css"
+    />
   </head>
   <body>
     <main class="body">
@@ -16,16 +19,19 @@
         <div>
           <a href="index.html" class="icon">
             <h1>🍬</h1>
-            <h1>🍫</h1>
             <h1>🍭</h1>
+            <h1>🍫</h1>
           </a>
         </div>
+
+        <a href="index.html" class="search-click2"><h6>Search</h6>🔍 <h6>Candy</h6></a>
 
         <ul class="nav-menu">
           <li class="nav-item"><a href="index.html" class="link">Shop</a></li>
           <li class="nav-item"><a href="about.html" class="link">About</a></li>
-          <li class="nav-item"><a href="faq.html" class="link">FAQ</a></li>
-          <li class="nav-item"><a href="location.html" class="link">Contact</a></li>
+          <li class="nav-item">
+            <a href="location.html" class="link">Contact</a>
+          </li>
         </ul>
 
         <div class="hamburger">
@@ -33,7 +39,6 @@
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-  
 
         <a class="shopping" href="#">🛒</a>
       </header>
@@ -41,53 +46,65 @@
 
       <div class="popup">
         <div class="form-container">
-          <span id="closebtn" class="closebtn" onclick="this.element.style.display='none';">&times</span>
+          <span
+            id="closebtn"
+            class="closebtn"
+            onclick="this.element.style.display='none';"
+            >&times</span
+          >
 
           <h1 class="popup-text">Sign up for a 15% off coupon</h1>
 
           <center>
-            <img src="img/coupon.jpg" class="coupon">
-          </center> 
+            <img src="img/coupon.jpg" class="coupon" />
+          </center>
 
-          <a href="http://127.0.0.1:5500/CandyFactory/location.html#signup" class="btn">Click Here!</a>
+          <a
+            href="http://127.0.0.1:5500/CandyFactory/location.html#signup"
+            class="btn"
+            >Click Here!</a
+          >
         </div>
       </div>
 
-      <div class="main-banner" >
-        <div class="imgban">
-          <img src="img/banner1.jpg" class="banner">
+      <center>
+        <div class="main-banner">
+          <div class="imgban">
+            <img src="img/banner1.jpg" class="banner" />
+          </div>
+  
+          <div class="imgban">
+            <img src="img/banner2.jpg" class="banner" />
+          </div>
+  
+          <div class="imgban">
+            <img src="img/banner3.jpg" class="banner" />
+          </div>
         </div>
-
-        <div class="imgban">
-          <img src="img/banner2.jpg" class="banner">
-        </div>
-
-        <div class="imgban">
-          <img src="img/banner3.jpg" class="banner">
-        </div>
-      </div>
+      </center>
+      
 
       <script>
         let slideIndex = 0;
         showSlides();
-        
+
         function showSlides() {
           let i;
           let slides = document.getElementsByClassName("imgban");
 
           for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+            slides[i].style.display = "none";
           }
           slideIndex++;
           if (slideIndex > slides.length) {
-            slideIndex = 1
+            slideIndex = 1;
           }
-          slides[slideIndex-1].style.display = "block";
+          slides[slideIndex - 1].style.display = "block";
           setTimeout(showSlides, 4000);
         }
       </script>
 
-      <article class="page top">
+      <center class="page top">
         <div>
           <img
             src="https://i.pinimg.com/736x/48/d8/7a/48d87af1c3e6d0783fafe93cc0d43b85--candy-bowl-candy-dishes.jpg"
@@ -96,15 +113,16 @@
           />
         </div>
 
-        <div class="margin-text">
+        <div class="margin-text shadow2">
           <h1 class="intro">Fincher's Candy</h1>
           <br />
 
-          <p class="line">
-            Not sure what to get someone for the next special event? <br />
+          <p class="left line">
+            Not sure what to get someone <br />
+            for the next special event? <br />
             Look no further! <br />
-            Come shop Fincher's Candy and gift your loved ones with something
-            sweet.
+            Come shop Fincher's Candy and gift <br />
+            your loved ones with something sweet.
           </p>
           <br /><br />
 
@@ -113,14 +131,15 @@
 
           <p class="line mail-list">
             Looking to save on your next order?<br />
-            Join our mailing list for our exclusive mail-list coupons and keep
-            up on new flavors.
+            Join our mailing list for our <br />
+            exclusive mail-list coupons and <br />
+            keep up on new flavors.
           </p>
           <br />
 
-          <a href="http://127.0.0.1:5500/CandyFactory/location.html#signup" class="click">Sign Up</a>
+          <a href="location.html#signup" class="click">Sign Up</a>
         </div>
-      </article>
+      </center>
 
       <section class="page background">
         <a href="about.html" class="click-3 extra">
@@ -132,8 +151,8 @@
           />
         </a>
 
-        <a href="nutrition.html" class="click-3 extra">
-          <span class="span">Candy nutrition</span>
+        <a href="index.html" class="click-3 extra">
+          <span class="span">Shop Our Candy</span>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSjVJhrrbHLtuUlBmmVoTFwjWkAVZZxEkWmQ&usqp=CAU"
             alt="heating candy"
@@ -144,7 +163,7 @@
 
       <footer class="footer">
         <p class="copyright">&copy; 2022 Fincher's Candy</p>
-  
+
         <div class="social-links">
           <a href="https://www.facebook.com/" target="_blank">
             <img
@@ -153,7 +172,7 @@
               class="social-media"
             />
           </a>
-  
+
           <a href="https://www.instagram.com/" target="_blank">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXO2p5Jqo2rRvko3wQJu9Ps4RI4LwyF9TNRH2TyxmRTawEwi12vR4_d428xM7yddYXd0k&usqp=CAU"
@@ -161,7 +180,7 @@
               class="social-media"
             />
           </a>
-  
+
           <a href="https://twitter.com/" target="_blank">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalGLWwNq0BPJffBAjTAA51YnfhxKB07yxog&usqp=CAU"

@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fincher's Candy</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap-grid.css"
-    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css"/>
   </head>
   <body>
-    <main class="body-2">
+    <main>
       <header class="header">
         <a href="landing.html" class="fincher">
           <h1>Fincher's Candy</h1>
@@ -20,14 +17,20 @@
 
         <div class="icon">
           <h1>🍬</h1>
-          <h1>🍫</h1>
           <h1>🍭</h1>
+          <h1>🍫</h1>
+        </div>
+
+        <a class="search-click">🔍</a>
+
+        <div class="search-hide">
+          <a><img src="https://img.icons8.com/ios-glyphs/2x/search.png" class="search-icon"></a>
+          <input type="text" placeholder="Search" id="search-bar" class="search-text" onkeyup="searchBar()">
         </div>
 
         <ul class="nav-menu">
           <li class="nav-item"><a href="landing.html" class="link">Home</a></li>
           <li class="nav-item"><a href="about.html" class="link">About</a></li>
-          <li class="nav-item"><a href="faq.html" class="link">FAQ</a></li>
           <li class="nav-item"><a href="location.html" class="link">Contact</a></li>
         </ul>
 
@@ -41,315 +44,356 @@
       </header>
       <br /><br />
 
-      <section class="container">
-        <div class="candy">
-          <div>
-            <img
-              src="https://static.wixstatic.com/media/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg"
-              alt="Gummy Worms"
-              class="pic photo shadow2"
-            />
-            <p class="detail">Gummy Worms</p>
-            <p class="price">$5/lb</p>
-            <button onclick="worms()" id="worms-btn" class="add">
+      <section>  
+        <h2 class="section">Chewy Candy</h2>
+        <div class="container">
+          <div class="candy" id="licorice">
+            <a href="licorice.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyoGlMk9EIb1BJ8C2D2FOjo7qWHW5rKaKbA&usqp=CAU"
+                alt="Black Licorice"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Black Licorice</p>
+            <p class="price">$6/lb</p>
+            <button onclick="licorice()" class="add">
               Add to Cart
             </button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNrCJb0Z8yDRIzknGSuffVZvU0GCgH5ytOzg&usqp=CAU"
-              alt="Fruit Slices"
-              class="pic photo-2 shadow2"
-            />
+          <div class="candy" id="caramel">
+            <a href="caramel.html">
+              <img
+                src="https://tastesbetterfromscratch.com/wp-content/uploads/2014/04/Homemade-Caramels-4.jpg"
+                alt="Caramel Chews"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Caramel</p>
+            <p class="price">2.5oz for $9</p>
+            <button onclick="caramel()" class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="gum">
+            <a href="gum.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA33Wlng065mVYRRQ3WO9wKnrz8rCzinuM5g&usqp=CAU"
+                alt="Hard-shelled Gum"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Hard-shelled Gum</p>
+            <p class="price">$6/lb</p>
+            <button onclick="gum()" class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="chews">
+            <a href="chews.html">
+              <img
+                src="https://i.pinimg.com/originals/65/19/1a/65191a722d2ebb4d973f31d3f801ce10.jpg"
+                alt="Fruit Chews"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Fruit Chews</p>
+            <p class="price">$10/lbs</p>
+            <button onclick="chews()" class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="slices">
+            <a href="slices.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNrCJb0Z8yDRIzknGSuffVZvU0GCgH5ytOzg&usqp=CAU"
+                alt="Fruit Slices"
+                class="photo-3 shadow2"
+              />
+            </a>
             <p class="detail">Fruit Slices</p>
             <p class="price">$15/3lbs</p>
-            <button onclick="slices()" id="slices" class="add">
+            <button onclick="slices()" class="add">
               Add to Cart
             </button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTFJJlVa0-KchXj2iTLPQT689dR0leErGd3w&usqp=CAU"
-              alt="Fruit Chews"
-              class="pic photo shadow2"
-            />
-            <p class="detail">Fruit Chews</p>
-            <p class="price">$10/1lbs</p>
-            <button onclick="chews()" id="chews" class="add">
-              Add to Cart
-            </button>
+          <div class="candy" id="worms">
+            <a href="worms.html">
+              <img
+              src="https://static.wixstatic.com/media/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85/13f040_74e3a45419f7417d9f19ff91b1854d47~mv2.jpg"
+              alt="Gummy Worms"
+              class="photo-3 shadow2"
+              />
+              </a>
+              <p class="detail">Gummy Worms</p>
+              <p class="price">$5/lb</p>
+              <button onclick="worms()"  class="add">
+                Add to Cart
+              </button>
           </div>
         </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA33Wlng065mVYRRQ3WO9wKnrz8rCzinuM5g&usqp=CAU"
-              alt="Chiclet Gum"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Chiclet Gum</p>
-            <p class="price">$10/1lbs</p>
-            <button onclick="gum()" id="gum" class="add">Add to Cart</button>
-          </div>
-
-          <div>
-            <img
-              src="https://tastesbetterfromscratch.com/wp-content/uploads/2014/04/Homemade-Caramels-4.jpg"
-              alt="Caramel Chews"
-              class="pic photo-3 shadow2"
-            />
-            <p class="detail padding3">Caramel</p>
-            <p class="price">2.5oz for $9</p>
-            <button onclick="caramel()" id="caramel" class="add">
-              Add to Cart
-            </button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyoGlMk9EIb1BJ8C2D2FOjo7qWHW5rKaKbA&usqp=CAU"
-              alt="Black Licorice"
-              class="pic photo-3 shadow2"
-            />
-            <p class="detail padding3">Black Licorice</p>
-            <p class="price">$6/lb</p>
-            <button onclick="licorice()" id="licorice" class="add">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaGVnXW_l107mSUaaVaU2-ulGpC4AsN1Fe3A&usqp=CAU"
-              alt="Peppermint Patties"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail padding3">Peppermint Patties</p>
-            <p class="price">$7/lb</p>
-            <button onclick="patties()" id="patties" class="add">
-              Add to Cart
-            </button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoqN13DsKut-VhKccMeD9LJGP0LTorOAUug&usqp=CAU"
-              alt="Chocolate Truffles"
-              class="pic photo-2 shadow2"
-            />
-            <div>
-              <p class="detail">Chocolate Truffles</p>
-              <p class="price">4 for $10</p>
-              <button onclick="truffles()" id="truffles" class="add">Add to Cart</button>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdf2ROqqCr3TuSRJQ-ZnCX6l9HS1Yf_V5xQ&usqp=CAU"
-              alt="Peanut Butter Cups"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Peanut Butter Cups</p>
-            <p class="price">4 for $5</p>
-            <button onclick="cups()" id="cups" class="add">Add to Cart</button>
-          </div>
-        </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV5LNpnO-cnz8H_HufvEuflIpqu61DKva33p77JPsYpS3vNkn3wpGQDhJxiXN2gjgHHXk&usqp=CAU"
-              alt="Chocolate Strawberries"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Chocolate Strawberries</p>
-            <p class="price">6 for $20</p>
-            <button onclick="strawberry()" id="strawberry" class="add">
-              Add to Cart
-            </button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbA5p3DdZiupEJUx6MWtNhVCdV3IRELdl5_LvxUvsmLebij2jR5H22BcdcaMOrv3lYnMA&usqp=CAU"
-              alt="Chocolate Fudge"
-              class="pic photo-2 shadow2"
-            />
+        
+        <h2 class="section" id="chocolate">Chocolate</h2>
+        <div class="container">
+          <div class="candy" id="fudge">
+            <a href="fudge.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbA5p3DdZiupEJUx6MWtNhVCdV3IRELdl5_LvxUvsmLebij2jR5H22BcdcaMOrv3lYnMA&usqp=CAU"
+                alt="Chocolate Fudge"
+                class="photo-3 shadow2"
+              />
+            </a>
             <p class="detail">Chocolate Fudge</p>
             <p class="price">$12/12oz</p>
-            <button onclick="fudge()" id="fudge" class="add">
+            <button onclick="fudge()" class="add">
               Add to Cart
             </button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxdp6D43bfTAosnbrheAtgGL83BcVCTaFTbA&usqp=CAU"
-              alt="Smore Bites"
-              class="pic photo-2 shadow2"
-            />
+          <div class="candy" id="strawberry">
+            <a href="strawberries.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV5LNpnO-cnz8H_HufvEuflIpqu61DKva33p77JPsYpS3vNkn3wpGQDhJxiXN2gjgHHXk&usqp=CAU"
+                alt="Chocolate Strawberries"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Chocolate Strawberries</p>
+            <p class="price">6 for $20</p>
+            <button onclick="strawberry()" class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="truffles">
+            <a href="truffles.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoqN13DsKut-VhKccMeD9LJGP0LTorOAUug&usqp=CAU"
+                alt="Chocolate Truffles"
+                class="photo-3 shadow2"
+              />
+            </a>
+              <p class="detail">Chocolate Truffles</p>
+              <p class="price">4 for $10</p>
+              <button onclick="truffles()" class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="cups">
+            <a href="cups.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdf2ROqqCr3TuSRJQ-ZnCX6l9HS1Yf_V5xQ&usqp=CAU"
+                alt="Peanut Butter Cups"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Peanut Butter Cups</p>
+            <p class="price">4 for $5</p>
+            <button onclick="cups()" class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="patties">
+            <a href="patties.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaGVnXW_l107mSUaaVaU2-ulGpC4AsN1Fe3A&usqp=CAU"
+                alt="Peppermint Patties"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Peppermint Patties</p>
+            <p class="price">$7/lb</p>
+            <button onclick="patties()" class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="fudge">
+            <a href="smores.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxdp6D43bfTAosnbrheAtgGL83BcVCTaFTbA&usqp=CAU"
+                alt="Smore Bites"
+                class="photo-3 shadow2"
+              />
+            </a>
             <p class="detail">Smore Bites</p>
             <p class="price">2 for $5</p>
-            <button onclick="fudge()" id="fudge" class="add">
+            <button onclick="fudge()"  class="add">
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsC5GfE6CIZCxiVE9QWIg5c3oHtaIGH63TsA&usqp=CAU"
-              alt="Peanut Brittle"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Peanut Brittle</p>
-            <p class="price">$7/lb</p>
-            <button onclick="brittle()" id="brittle" class="add">
-              Add to Cart
-            </button>
+        <h2 class="section" id="hard">Hard Candy</h2>
+        <div class="container">
+          <div class="candy" id="cinnamon">
+            <a href="cinnamon.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKtHZKYyE1gENu1RRA-JkIln-CRtSj67UPQ&usqp=CAU"
+                alt="Cinnamon Lollipops"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Cinnamon Lollipops</p>
+            <p class="price">12 for $15</p>
+            <button onclick="cinnamon()"  class="add">Add to Cart</button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHEnU9kkDcAguP6_99Mlg7mM28vG8EK_pKnA&usqp=CAU"
-              alt="Burnt Peanuts"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Burnt Peanuts</p>
-            <p class="price">$6/lb</p>
-            <button onclick="peanuts()" id="peanuts" class="add">
-              Add to Cart
-            </button>
+          <div class="candy" id="twists">
+            <a href="twists.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRrmEhPz0E4u1YSlVVaLJ-IDTPOqeeuyu1Q&usqp=CAU"
+                alt="Rainbow Twists"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Rainbow Twists</p>
+            <p class="price">10 for $6</p>
+            <button onclick="twists()" class="add">Add to Cart</button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx2I75fq2LCD_e2iokVYQKBPtRLGUX0LuBLA&usqp=CAU"
-              alt="Candied Pecans"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Candied Pecans</p>
-            <p class="price">$18/lb</p>
-            <button onclick="pecans()" id="pecans" class="add">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqiOZ2NQgbZ0p6Jig8iUvqTyrklNtITyi1A&usqp=CAU"
-              alt="Bridge Mix"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Bridge Mix</p>
-            <p class="price">$9/lb</p>
-            <button onclick="bridge()" id="bridge" class="add">Add to Cart</button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGh578A6SN2htZn6TPBUs8YQ-MCn8SON0kqw&usqp=CAU"
-              alt="White Chocolate Almond Bark"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">White Chocolate Almond Bark</p>
-            <p class="price">$10/8oz</p>
-            <button onclick="bark()" id="bark" class="add">Add to Cart</button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpIyjdX5DhD6TBvXKX2Oe8OLh570bSpBpJxUqUmcePTskRNDsCMdiaN_qadCKdptaShiM&usqp=CAU"
-              alt="Maple Nut"
-              class="pic photo-2 shadow2"
-            />
-            <p class="detail">Maple Nut</p>
-            <p class="price">$6/16oz</p>
-            <button onclick="maple()" id="bark" class="add">Add to Cart</button>
-          </div>
-        </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBkh_fNsAAT_xP0mJhEts6ddNmgXzdAdpsQ&usqp=CAU"
-              alt="Rock Candy"
-              class="pic photo shadow2"
-            />
-            <p class="detail">Rock Candy</p>
-            <p class="price">10 for $5</p>
-            <button onclick="rocks()" id="rock" class="add">Add to Cart</button>
-          </div>
-
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLEXj8VuUmzmsOrCx1Qf1DQVyxhNkJ0ZnH0w&usqp=CAU"
-              alt="Sprinkle Lollipops"
-              class="pic photo-3 shadow2"
-            />
-            <p class="detail">Sprinkle Lollipops</p>
-            <p class="price">20 for $5</p>
-            <button onclick="lolli()" id="lolli" class="add">Add to Cart</button>
-          </div>
-
-          <div>
-            <img
+          <div class="candy" id="sticks">
+            <a href="sticks.html">
+              <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJFUP5JouqIxDYgw9Hd3ajByVw9IDupG05A&usqp=CAU"
               alt="Peppermint Sticks"
-              class="pic photo-3 shadow2"
-            />
+              class="photo-3 shadow2"
+              />
+            </a>
             <p class="detail">Peppermint Sticks</p>
             <p class="price">$8/lb</p>
-            <button onclick="sticks()" id="sticks" class="add">Add to Cart</button>
-          </div>
-        </div>
-
-        <div class="candy">
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRrmEhPz0E4u1YSlVVaLJ-IDTPOqeeuyu1Q&usqp=CAU"
-              alt="Lollipop Twists"
-              class="pic photo shadow2"
-            />
-            <p class="detail">Lollipop Twists</p>
-            <p class="price">20 for $6</p>
-            <button onclick="twists()" id="twists" class="add">Add to Cart</button>
+            <button onclick="sticks()" class="add">Add to Cart</button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKtHZKYyE1gENu1RRA-JkIln-CRtSj67UPQ&usqp=CAU"
-              alt="Cinnamon Lollipops"
-              class="pic photo shadow2"
-            />
-            <p class="detail">Cinnamon Lollipops</p>
-            <p class="price">12 for $17</p>
-            <button onclick="cinnamon()" id="cinnamon" class="add">Add to Cart</button>
+          <div class="candy" id="rock">
+            <a href="rock.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBkh_fNsAAT_xP0mJhEts6ddNmgXzdAdpsQ&usqp=CAU"
+                alt="Rock Candy"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Rock Candy</p>
+            <p class="price">10 for $5</p>
+            <button onclick="rocks()" class="add">Add to Cart</button>
           </div>
 
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMyoHQkEW04ftB5EtXKzq_7C2M6pEGXliE6g&usqp=CAU"
-              alt="Rootbeer Candies"
-              class="pic photo shadow2"
-            />
+          <div class="candy" id="rootbeer">
+            <a href="rootbeer.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMyoHQkEW04ftB5EtXKzq_7C2M6pEGXliE6g&usqp=CAU"
+                alt="Rootbeer Candies"
+                class="photo-3 shadow2"
+              />
+            </a>
             <p class="detail">Rootbeer Candies</p>
             <p class="price">$6/lb</p>
-            <button onclick="rootbeer()" id="rootbeer" class="add">Add to Cart</button>
+            <button onclick="rootbeer()" class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="lolli">
+            <a href="sprinkle.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLEXj8VuUmzmsOrCx1Qf1DQVyxhNkJ0ZnH0w&usqp=CAU"
+                alt="Sprinkle Lollipops"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Sprinkle Lollipops</p>
+            <p class="price">20 for $5</p>
+            <button onclick="lolli()" class="add">Add to Cart</button>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+
+        <h2 class="section" id="nut">Nutty Treats</h2>
+        <div class="container">
+          <div class="candy" id="bark">
+            <a href="bark.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGh578A6SN2htZn6TPBUs8YQ-MCn8SON0kqw&usqp=CAU"
+                alt="Almond Bark"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Almond Bark</p>
+            <p class="price">$10/8oz</p>
+            <button onclick="bark()" class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="bridge">
+            <a href="bridge.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqiOZ2NQgbZ0p6Jig8iUvqTyrklNtITyi1A&usqp=CAU"
+                alt="Bridge Mix"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Bridge Mix</p>
+            <p class="price">$9/lb</p>
+            <button onclick="bridge()"  class="add">Add to Cart</button>
+          </div>
+
+          <div class="candy" id="peanuts">
+            <a href="peanuts.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHEnU9kkDcAguP6_99Mlg7mM28vG8EK_pKnA&usqp=CAU"
+                alt="Burnt Peanuts"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Burnt Peanuts</p>
+            <p class="price">$6/lb</p>
+            <button onclick="peanuts()"  class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="pecans">
+            <a href="pecans.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx2I75fq2LCD_e2iokVYQKBPtRLGUX0LuBLA&usqp=CAU"
+                alt="Candied Pecans"
+                class="photo-3 shadow2"
+                />
+            </a>
+            <p class="detail">Candied Pecans</p>
+            <p class="price">$18/lb</p>
+            <button onclick="pecans()"  class="add">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="candy" id="maple">
+            <a href="maple.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpIyjdX5DhD6TBvXKX2Oe8OLh570bSpBpJxUqUmcePTskRNDsCMdiaN_qadCKdptaShiM&usqp=CAU"
+                alt="Maple Nut"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Maple Nut</p>
+            <p class="price">$6/16oz</p>
+            <button onclick="maple()" class="add">Add to Cart</button>
+          </div>
+          
+          <div class="candy" id="brittle">
+            <a href="brittle.html">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsC5GfE6CIZCxiVE9QWIg5c3oHtaIGH63TsA&usqp=CAU"
+                alt="Peanut Brittle"
+                class="photo-3 shadow2"
+              />
+            </a>
+            <p class="detail">Peanut Brittle</p>
+            <p class="price">$7/lb</p>
+            <button onclick="brittle()" class="add">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="copyright">&copy; 2022 Fincher's Candy</p>

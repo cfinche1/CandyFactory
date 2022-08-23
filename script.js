@@ -13,7 +13,6 @@ document.querySelectorAll("link").forEach(n =>n.addEventListener("click", () =>{
     navMenu.classList.remove("active");
 }))
 
-
 function showAlert(){
     let email = document.getElementById("email-address").value;
     let first = document.getElementById("name1").value;
@@ -46,7 +45,7 @@ function truffles(){
 
 function cups(){
     const cup = "Peanut Butter Cups";
-    const cupPrice = "4 for $10";
+    const cupPrice = "4 for $5";
     shop(cup, cupPrice);
 }
 
@@ -58,7 +57,7 @@ function rocks(){
 
 function gum(){
     const chiclet = "Chiclet Gum";
-    const chicletPrice = "$10/11lbs";
+    const chicletPrice = "$6/lb";
     shop(chiclet, chicletPrice);
 }
 
@@ -118,7 +117,7 @@ function sticks(){
 
 function twists(){
     const twist = "Lollipop Twists";
-    const twistPrice = "20 for $6";
+    const twistPrice = "10 for $6";
     shop(twist, twistPrice);
 }
 
@@ -147,7 +146,7 @@ function bridge(){
 }
 
 function bark(){
-    const barks = "White Chocolate Almond Bark";
+    const barks = "Almond Bark";
     const barksPrice = "$10/8oz";
     shop(barks, barksPrice);
 }
@@ -160,7 +159,7 @@ function maple(){
 
 function cinnamon(){
     const cinnamons = "Cinnamon Lollipops";
-    const cinnamonsPrice = "12 for $17";
+    const cinnamonsPrice = "12 for $15";
     shop(cinnamons, cinnamonsPrice);
 }
 
@@ -190,5 +189,46 @@ function popupAlert(){
     let address = document.getElementById("popup-email").value;
 
     alert("Coupon code has been sent to " + address + ".")
+}
+
+const starWrapper = document.querySelector(".stars");
+const stars = document.querySelectorAll(".stars a");
+
+stars.forEach((star, clickedIdx) =>{
+    star.addEventListener("click", () =>{
+        starWrapper.classList.add("disabled");
+        stars.forEach((otherStar, otherIdx) => {
+            if (otherIdx <= clickedIdx){
+                otherStar.classList.add("active");
+            }
+        })
+    })
+})
+
+const searchClick = document.querySelector(".search-click");
+const searchHide = document.querySelector(".search-hide");
+
+searchClick.addEventListener("click", () =>{
+    searchClick.classList.toggle("active");
+    searchHide.classList.toggle("active");
+})
+
+function searchBar() {
+    let input, filter, candy, detail, section, txtValue;
+
+    input= document.getElementById("search-bar");
+    filter = input.value.toUpperCase();
+    candy = document.getElementsByClassName("candy");
+    section = document.getElementsByClassName("section");
+
+    for (i = 0; i < candy.length; i++) {
+        detail = candy[i].getElementsByClassName("detail")[0];
+        txtValue = detail.textContent || detail.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            candy[i].style.display = "";
+        } else {
+            candy[i].style.display = "none";
+        }
+    }
 }
 
